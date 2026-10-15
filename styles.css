@@ -1,0 +1,178 @@
+/*--Inicio del Modelo de Caja--*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    line-height: 1.6;
+    background-color: #c8e9fb;
+    color: #484848;
+}
+
+/*---Estilo del encabezado---*/
+header {
+    background-color: #2f84bd;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*---Estilo barra de navegación---*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1c5d99;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: block;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+nav a:hover {
+    background-color: #1b365d;
+    color: #ff9900;
+}
+
+/*---Contenedor principal y secciones---*/
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #1b365d;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #006688;
+    padding-bottom: 0.5rem;
+}
+
+/*---Tarjetas de Servicios y Nosotros---*/
+#Servicios,
+#Nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+#Servicios h2,
+#Nosotros h2 {
+    width: 100%;
+}
+
+article {
+    flex: 1 1 280px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre una tarjeta */
+article:hover {
+    transform: translateY(-5px);
+}
+
+/*---Formulario de contacto---*/
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bold;
+    color: #1b365d;
+}
+
+/* Campos del formulario */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Efecto al seleccionar un campo */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #006688;
+    box-shadow: 0 0 5px rgba(0, 102, 136, 0.5);
+}
+
+/*---Botones del formulario---*/
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #2f84bd;
+    color: #ffffff;
+}
+
+button[type="reset"] {
+    background-color: #cccccc;
+    color: #333333;
+}
+
+/*---Diseño adaptable a dispositivos móviles---*/
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    article {
+        flex: 1 1 100%;
+    }
+}
+
+/*---Pie de página---*/
+footer {
+    background-color: #1c5d99;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
